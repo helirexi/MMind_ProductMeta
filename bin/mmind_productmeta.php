@@ -31,8 +31,11 @@ require_once($_file_path.'/../src/MMind/ProductMeta/ProductMeta.php');
 // EDIT: Magento root folder
 $_magento_root = realpath(dirname(__FILE__)."/../");
 
+// EDIT: Magento Store ID
+$_store_id = 0;
+
 // Execution
-$productMeta = new MMind\ProductMeta\ProductMeta($_magento_root);
+$productMeta = new MMind\ProductMeta\ProductMeta($_magento_root, $_store_id);
 if(isset($argv[1]))
 {
     switch($argv[1])

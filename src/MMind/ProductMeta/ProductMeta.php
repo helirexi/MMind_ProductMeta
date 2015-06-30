@@ -29,13 +29,14 @@ class ProductMeta
     /**
      * Constructor
      *
-     * @param string $_magento_root
+     * @param string    $_magento_root
+     * @param int       $_store_id
      */
-    public function __construct($_magento_root)
+    public function __construct($_magento_root, $_store_id)
     {
         $this->_magento_root = $_magento_root;
         require_once($this->_magento_root.'/app/Mage.php');
-        \Mage::app();
+        \Mage::app()->setCurrentStore($_store_id);
     }
 
     /**
