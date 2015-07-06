@@ -12,4 +12,4 @@ Magento 1.x CE.
 
 # Stable version
 
-1.0.0
+1.0.1-p1
