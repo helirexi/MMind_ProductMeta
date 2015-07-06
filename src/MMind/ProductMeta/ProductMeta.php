@@ -65,12 +65,7 @@ class ProductMeta
     public function run()
     {
         $collection = \Mage::getModel('catalog/product')->getCollection();
-        $collection->addAttributeToSelect("name")
-            ->addAttributeToSelect("description")
-            ->addAttributeToSelect("short_description")
-            ->addAttributeToSelect("meta_title")
-            ->addAttributeToSelect("meta_description")
-            ->addAttributeToSelect("meta_keyword")
+        $collection->addAttributeToSelect("*")
             ->addAttributeToFilter('meta_description', array('null' => true))
             ->addAttributeToFilter('meta_keyword', array('null' => true))
             ->addAttributeToFilter('meta_title', array('null' => true))
@@ -115,12 +110,7 @@ class ProductMeta
 
             $this->log("***** COUNTER: ".$_count);
             $collection = \Mage::getModel('catalog/product')->getCollection();
-            $collection->addAttributeToSelect("name")
-                ->addAttributeToSelect("description")
-                ->addAttributeToSelect("short_description")
-                ->addAttributeToSelect("meta_title")
-                ->addAttributeToSelect("meta_description")
-                ->addAttributeToSelect("meta_keyword")
+            $collection->addAttributeToSelect("*")
                 ->addAttributeToFilter('meta_description', array('notnull' => true))
                 ->setPageSize($this->getPageSize())
                 ->setCurPage($increment);
