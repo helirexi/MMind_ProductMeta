@@ -24,9 +24,9 @@ if (php_sapi_name() !== 'cli') {
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-// EDIT: Set path to ProductMeta.php class
+// EDIT: Set path to autoload file (autoload.php)
 $_file_path = realpath(dirname(__FILE__));
-require_once($_file_path.'/../src/MMind/ProductMeta/ProductMeta.php');
+require_once($_file_path.'/../vendor/autoload.php');
 
 // EDIT: Magento root folder
 $_magento_root = realpath(dirname(__FILE__)."/../");

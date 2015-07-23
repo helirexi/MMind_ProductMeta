@@ -8,5 +8,10 @@
       "name": "Mage Mind",
       "email": "tech@magemind.com"
     }
-  ]
+  ],
+  "autoload": {
+    "psr-4": {
+      "MMind\\ProductMeta\\": "src/"
+    }
+  }
 }
